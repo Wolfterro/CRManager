@@ -1,0 +1,1 @@
+from user.viewsets.user_profile_viewset import UserProfileViewSet

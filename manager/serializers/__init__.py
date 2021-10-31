@@ -1,0 +1,4 @@
+from manager.serializers.activity_serializer import ActivitySerializer
+from manager.serializers.pce_serializer import PCESerializer
+from manager.serializers.cr_serializer import CRSerializer
+from manager.serializers.process_serializer import ProcessSerializer

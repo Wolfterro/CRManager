@@ -1,0 +1,2 @@
+from user.views.custom_auth_token import CustomAuthToken
+from user.views.user_profile_view import UserProfileView

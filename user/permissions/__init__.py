@@ -1,0 +1,2 @@
+from user.permissions.user_permissions import UserPermission
+from user.permissions.user_profile_permissions import UserProfilePermission

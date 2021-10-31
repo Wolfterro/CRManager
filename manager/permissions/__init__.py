@@ -1,0 +1,2 @@
+from manager.permissions.cr_permission import CRPermission
+from manager.permissions.process_permission import ProcessPermission
