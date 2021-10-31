@@ -13,3 +13,10 @@ migrate:
 makemigrations:
 	@python manage.py makemigrations
 
+install:
+	@pip install -r requirements.txt
+	@python manage.py migrate
+	@python manage.py createsuperuser
+	@python manage.py runserver
+	@xdg-open http://localhost:8000 &
+
