@@ -17,6 +17,8 @@ Os processos que podem ser gerenciados inicialmente são:
 
 Também é possível registrar um CR para o usuário, o que auxilia no gerenciamento das atividades permitidas vinculadas ao documento.
 
+Através dessa ferramenta, é possível cadastrar todos os processos pendentes ou já concluídos do usuário, com informações detalhadas sobre os processos e com a contagem de dias úteis e dias corridos desde o início do processo e da compensação da GRU.
+
 ## Instalação
 Para a instalação o projeto recomenda-se criar primeiro uma virtualenv:
 ```shell
