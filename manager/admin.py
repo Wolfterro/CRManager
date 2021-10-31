@@ -21,7 +21,29 @@ class ActivityAdmin(admin.ModelAdmin):
 
 @admin.register(Process)
 class ProcessAdmin(admin.ModelAdmin):
-    list_display = ('protocol', 'user', 'service', 'status', 'entry_date', 'gru_compensation_date', 'om', 'pce', )
+    def entry_date_days_count(self, obj):
+        return "{} / {}".format(obj.entry_date_days, obj.entry_date_working_days)
+    entry_date_days_count.short_description = "Dias corridos / Dias úteis"
+
+    def gru_compensation_days_count(self, obj):
+        return "{} / {}".format(
+            obj.gru_compensation_date_days if obj.gru_compensation_date_days else "-",
+            obj.gru_compensation_date_working_days if obj.gru_compensation_date_working_days else "-"
+        )
+    gru_compensation_days_count.short_description = "Dias corridos / Dias úteis"
+
+    list_display = (
+        'protocol',
+        'user',
+        'service',
+        'status',
+        'entry_date',
+        'entry_date_days_count',
+        'gru_compensation_date',
+        'gru_compensation_days_count',
+        'om',
+        'pce',
+    )
 
 
 @admin.register(PCE)
