@@ -19,6 +19,17 @@ Também é possível registrar um CR para o usuário, o que auxilia no gerenciam
 
 Através dessa ferramenta, é possível cadastrar todos os processos pendentes ou já concluídos do usuário, com informações detalhadas sobre os processos e com a contagem de dias úteis e dias corridos desde o início do processo e da compensação da GRU.
 
+Abaixo está alguns prints do painel de controle do projeto:
+
+**Gerenciador de Processos:**
+<img src="https://github.com/Wolfterro/CRManager/raw/master/docs/screenshots/screnshot1.png" />
+
+**Gerenciador de Perfil de Usuários:**
+<img src="https://github.com/Wolfterro/CRManager/raw/master/docs/screenshots/screnshot2.png" />
+
+**Gerenciador de CR:**
+<img src="https://github.com/Wolfterro/CRManager/raw/master/docs/screenshots/screnshot3.png" />
+
 ## Instalação
 Para a instalação o projeto recomenda-se criar primeiro uma virtualenv:
 ```shell
