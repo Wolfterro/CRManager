@@ -72,8 +72,9 @@ class UserProfileView(APIView):
                     )
 
                     serializer = UserProfileSerializer(user_profile)
-                    serializer.data['token'] = user_profile.authorization_token
-                    return Response(serializer.data)
+                    data = serializer.data.copy()
+                    data['token'] = user_profile.authorization_token
+                    return Response(data, status=201)
 
     def patch(self, request, pk):
         data = request.data
@@ -104,7 +105,7 @@ class UserProfileView(APIView):
                     user_profile.refresh_from_db()
 
                     serializer = UserProfileSerializer(user_profile)
-                    return Response(serializer.data)
+                    return Response(serializer.data, status=202)
 
     def delete(self, request, pk):
         with transaction.atomic():

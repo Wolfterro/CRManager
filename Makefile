@@ -13,6 +13,9 @@ migrate:
 makemigrations:
 	@python manage.py makemigrations
 
+test:
+	@python manage.py test
+
 install:
 	@pip install -r requirements.txt
 	@python manage.py migrate
