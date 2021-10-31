@@ -15,10 +15,18 @@ RM_CHOICES = (
 
 SERVICE_CHOICES = (
     ('cr_concession', "Concessão de CR"),
+    ('address_update', "Atualização de Endereço do Acervo"),
+    ('doc_update', "Atualização de Documento Pessoal"),
+    ('activity_update', "Atualização de Tipo de Atividade"),
+    ('cr_cancel', "Cancelamento de CR para Pessoa Física"),
+    ('second_address_add', "Inclusão de 2º Endereço de Acervo"),
     ('purchase_authorization', "Autorização de Compra"),
     ('craf', "CRAF"),
     ('gt', "Guia de Trânsito"),
     ('register', "Apostilamento"),
+    ('import_authorization', "Autorização de Aquisição de PCE por Importação (CII)"),
+    ('procurator_add', "Instituir Procurador para Pessoa Física"),
+    ('revalidation', "Revalidação para Pessoa Física")
 )
 
 STATUS_CHOICES = (
