@@ -18,7 +18,7 @@ from django.urls import path, include
 
 from user.views import CustomAuthToken, UserProfileView
 
-from manager.views import ProcessView, CRView, ServiceTypeView
+from manager.views import ProcessView, CRView, ServiceTypeView, ActivityView
 
 
 urlpatterns = [
@@ -36,6 +36,10 @@ urlpatterns = [
 
     # Service Type URLs
     path('service_type/', ServiceTypeView.as_view()),
+
+    # Activity URLs
+    path('activity/', ActivityView.as_view()),
+    path('activity/<int:pk>/', ActivityView.as_view()),
 
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
