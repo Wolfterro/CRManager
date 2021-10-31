@@ -58,7 +58,7 @@ class ProcessView(APIView):
                     process.save()
 
                 serializer = ProcessSerializer(process)
-                return Response(serializer.data)
+                return Response(serializer.data, status=201)
 
     def patch(self, request, pk):
         data = request.data
@@ -70,7 +70,7 @@ class ProcessView(APIView):
         else:
             user_profile = None
 
-        pce_data = data.pop('pce')
+        pce_data = data.pop('pce', None)
         pce = PCE.objects.filter(**pce_data).first() if pce_data else None
 
         with transaction.atomic():

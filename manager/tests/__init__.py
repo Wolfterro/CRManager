@@ -1,2 +1,4 @@
 from manager.tests.test_cr_testcase import CRTestCase
 from manager.tests.test_activity_testcase import ActivityTestCase
+from manager.tests.test_service_type_testcase import ServiceTypeTestCase
+from manager.tests.test_process_testcase import ProcessTestCase
