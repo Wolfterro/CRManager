@@ -71,7 +71,7 @@ class CRView(APIView):
                 cr.activities.add(*[x for x in activity_instance_list])
 
                 serializer = CRSerializer(cr)
-                return Response(serializer.data)
+                return Response(serializer.data, status=201)
 
     def patch(self, request, pk):
         data = request.data
