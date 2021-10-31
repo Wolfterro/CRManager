@@ -1,3 +1,4 @@
 Django==3.2.8
 djangorestframework==3.12.4
+django-admin-interface==0.17.3
 workalendar==16.1.0
