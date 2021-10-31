@@ -8,10 +8,18 @@ Esta ferramenta se destina aos usuários e despachantes que precisam gerenciar s
 
 Os processos que podem ser gerenciados inicialmente são:
 - Concessão de CR
+- Atualização de Endereço do Acervo
+- Atualização de Documento Pessoal
+- Atualização de Tipo de Atividade
+- Cancelamento de CR para Pessoa Física
+- Inclusão de 2º Endereço de Acervo
 - Autorização de Compra
 - CRAF
 - Guia de Trânsito
-- Apostilamentos
+- Apostilamento
+- Autorização de Aquisição de PCE por Importação (CII)
+- Instituir Procurador para Pessoa Física
+- Revalidação para Pessoa Física
 
 É possível também criar um perfil de usuário com as informações úteis da pessoa física, como E-Mail, CPF, RG, data de nascimento e endereços de acervo (principal e segundo endereço).
 
