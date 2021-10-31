@@ -57,5 +57,11 @@ Sempre que quiser rodar o projeto, basta usar o comando ```make run```:
 (CRManager) $ make run
 ```
 
+## Testes
+Para rodar os testes, basta executar o comando abaixo e aguardar a finalização dos testes:
+```shell
+(CRManager) $ make test
+```
+
 ## Collection
 A collection deste backend pode ser encontrada aqui: https://www.getpostman.com/collections/54722ca1478e12ca4109
