@@ -4,7 +4,7 @@ Gerenciador de processos e registros pessoais do Departamento de Fiscalização 
 ## Descrição
 Este projeto tem como objetivo ser o backend, implementado em Django 3.x, do projeto de gerenciador pessoal de processos e registros do Departamento de Fiscalização de Produtos Controlados (DFPC) do Exército Brasileiro, tanto aqueles processos criados via SisGCorp quanto os processos criados via pasta física diretamente na Secretaria de Fiscalização de Produtos Controlados (SFPC) da região do usuário.
 
-Esta ferramenta se destina aos usuários e despachantes que precisam gerenciar seus processos de forma simples através de um aplicativo Android (infelizmente iOS não será possível, visto que não possuo dispositivos para o desenvolvimento) que em breve será desenvolvido e o link do projeto incluído aqui (não haverá disponibilidade no Google Play).
+Esta ferramenta se destina aos usuários e despachantes que precisam gerenciar seus processos de forma simples através de um aplicativo Android (infelizmente iOS não será possível, visto que não possuo dispositivos para o desenvolvimento) disponível no seguinte repositório: [CRManager App](https://github.com/Wolfterro/CRManager-App)
 
 Os processos que podem ser gerenciados inicialmente são:
 - Concessão de CR
