@@ -13,6 +13,7 @@ class UserProfile(models.Model):
 
     full_name = models.CharField(max_length=150, default=None, verbose_name="Nome completo")
     email = models.EmailField(default=None, verbose_name="E-Mail")
+    photo = models.URLField(default=None, blank=True, null=True, verbose_name="Foto")
 
     birthday = models.DateField(default=None, verbose_name="Data de nascimento")
     cpf = models.CharField(max_length=16, default=None, verbose_name="CPF")
@@ -45,6 +46,19 @@ class UserProfile(models.Model):
             return "Token {}".format(self.user.auth_token.key)
 
         return None
+
+    @property
+    def cr(self):
+        cr = self.cr_set.first()
+        if not cr:
+            return None
+
+        return {
+            "number": cr.number,
+            "expiration_date": cr.expiration_date,
+            "rm": cr.rm,
+            "activities": [x.name for x in cr.activities.all()]
+        }
 
     # Static Methods
     # --------------

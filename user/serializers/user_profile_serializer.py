@@ -11,4 +11,4 @@ class UserProfileSerializer(HyperlinkedModelSerializer):
 
     class Meta:
         model = UserProfile
-        fields = ['id', 'full_name', 'email', 'cpf', 'birthday', 'rg', 'user', 'address', 'second_address']
+        fields = ['id', 'full_name', 'email', 'photo', 'cpf', 'birthday', 'rg', 'user', 'cr', 'address', 'second_address']
