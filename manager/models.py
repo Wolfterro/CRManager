@@ -113,3 +113,8 @@ class PCE(models.Model):
 
     def __str__(self):
         return "{}x {} - {} ({})".format(str(self.quantity), self.name, self.manufacturer, self.get_pce_type_display())
+
+    # Property
+    @property
+    def pce_type_label(self):
+        return self.get_pce_type_display()
