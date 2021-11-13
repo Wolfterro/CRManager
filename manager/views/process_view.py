@@ -30,7 +30,7 @@ class ProcessView(APIView):
                 )
             serializer = ProcessSerializer(instance)
         else:
-            queryset = Process.objects.filter(user=user)
+            queryset = Process.objects.filter(user=user).order_by('-id')
             serializer = ProcessSerializer(queryset, many=True)
 
         return Response(serializer.data)
