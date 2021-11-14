@@ -17,9 +17,6 @@ import dj_database_url
 
 HEROKU_ENV = os.getenv('HEROKU_ENV', False)
 
-if HEROKU_ENV:
-    django_heroku.settings(locals())
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -168,3 +165,6 @@ REST_FRAMEWORK = {
 # Django-admin-interface Settings
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 SILENCED_SYSTEM_CHECKS = ['security.W019']
+
+if HEROKU_ENV:
+    django_heroku.settings(locals())
