@@ -13,6 +13,8 @@ from user.errors import (COULD_NOT_FOUND_USER_WITH_ID_X,
                          USER_IS_REQUIRED,
                          MAIN_ADDRESS_IS_REQUIRED)
 
+from manager.models import CR, Activity
+
 
 # Create your views here.
 # =======================
@@ -55,6 +57,8 @@ class UserProfileView(APIView):
         if not address_data:
             return Response({"error": MAIN_ADDRESS_IS_REQUIRED}, status=400)
 
+        cr_data = data.pop('cr', None)
+
         with transaction.atomic():
             user = UserProfile.create_user(user_data)
             address = Address.objects.create(**address_data)
@@ -70,6 +74,19 @@ class UserProfileView(APIView):
                         second_address=second_address,
                         **serializer.validated_data
                     )
+
+                    if cr_data:
+                        cr = CR.objects.create(
+                            user=user_profile,
+                            number=cr_data.get('number'),
+                            expiration_date=cr_data.get('expiration_date'),
+                            rm=cr_data.get('rm')
+                        )
+
+                        activities = cr_data.get('activities', [])
+                        for activity in activities:
+                            activity = Activity.objects.filter(name=activity).first()
+                            cr.activities.add(activity)
 
                     serializer = UserProfileSerializer(user_profile)
                     data = serializer.data.copy()
