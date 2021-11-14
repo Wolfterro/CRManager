@@ -13,6 +13,7 @@ import os.path
 from pathlib import Path
 
 import django_heroku
+import dj_database_url
 
 HEROKU_ENV = os.getenv('HEROKU_ENV', False)
 
@@ -94,12 +95,21 @@ WSGI_APPLICATION = 'CRManager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if HEROKU_ENV:
+    DATABASES = {
+        'default': dj_database_url.config(
+            env="DATABASE_URL",
+            conn_max_age=600,
+            ssl_require=False
+        )
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
