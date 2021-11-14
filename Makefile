@@ -4,6 +4,9 @@ run:
 run-lan:
 	@python manage.py runserver 0.0.0.0:8000
 
+run-web:
+	@gunicorn CRManager.wsgi
+
 shell:
 	@python manage.py shell
 
