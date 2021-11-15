@@ -7,6 +7,9 @@ class UserProfilePermission(permissions.BasePermission):
     def has_permission(self, request, view):
         user_profile = get_user_profile(request)
         if not user_profile:
+            if request.method == "POST":
+                return True
+
             return False
 
         if user_profile.user.is_superuser:
